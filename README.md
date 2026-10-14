@@ -1,9 +1,9 @@
 # Cloudera Blueprint: New Item Evaluation Platform
 
+[![Author-Neelabh Pant](https://img.shields.io/badge/Author-Neelabh%20Pant-555555)](https://github.com/neelabhpant)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](backend/requirements.txt)
 [![Cloudera Blueprint](https://img.shields.io/badge/Cloudera-Blueprint-f96702.svg)](METADATA.yaml)
-[![Author-Neelabh Pant](https://img.shields.io/badge/Author-Neelabh%20Pant-555555)]()
 [![Stars](https://img.shields.io/github/stars/cloudera-applied-ai/AI_Blueprint_Retail-New-Item-Evaluation?logo=github&cacheSeconds=300)](https://github.com/cloudera-applied-ai/AI_Blueprint_Retail-New-Item-Evaluation/stargazers)
 [![Forks](https://img.shields.io/github/forks/cloudera-applied-ai/AI_Blueprint_Retail-New-Item-Evaluation?logo=github&cacheSeconds=300)](https://github.com/cloudera-applied-ai/AI_Blueprint_Retail-New-Item-Evaluation/network/members)
 
