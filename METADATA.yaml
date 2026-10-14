@@ -1,0 +1,57 @@
+# Cloudera Blueprint catalog metadata
+# Populate fields used by the master blueprint website and internal catalog.
+
+# --- Identity ---
+name: "Multimodal New Item Evaluation for Retail"
+slug: "retail-new-item-evaluation"
+description: "Evaluate supplier CPG/grocery proposals with CLIP + OpenSearch k-NN look-alikes, Iceberg/Impala retail data, CrewAI agents on Cloudera AI Inference, and a deterministic AUTHORIZE / MODIFY / DECLINE verdict."
+reprise_link: ""
+
+# --- Classification (website filters) ---
+catalog_classification:
+  - Enterprise Blueprint
+launchable: true
+lifecycle_status: Active
+
+# --- Industry & alignment ---
+industry: Retail
+industry_alignment: "Vertical"
+target_vertical: "CPG / Grocery assortment"
+
+# --- Tags (website search & browse) ---
+tags:
+  - multimodal
+  - clip
+  - opensearch
+  - crewai
+  - new-item-evaluation
+  - assortment
+  - iceberg
+  - impala
+  - fastapi
+  - react
+
+# --- Relationships ---
+product_mapping:
+  - Cloudera AI Workbench
+  - Cloudera AI Inference Service
+  - Cloudera Data Warehouse
+  - Cloudera Data Lake (Iceberg)
+model_dependencies:
+  - open-weight LLM (Llama 3.1 8B Instruct, Qwen2.5 7B Instruct, or equivalent)
+  - CLIP ViT-B/32 embeddings
+
+# --- Provenance ---
+publisher: cloudera
+source: Internal
+
+# --- Repository & assets ---
+public_github_link: "https://github.com/cloudera-applied-ai/AI_Blueprint_Retail-New-Item-Evaluation"
+
+# --- Ownership ---
+maintainer_name: "Cloudera Applied AI"
+
+# --- Dates ---
+date_created: "2026-09-03"
+date_updated: "2026-10-14"
+published_date: "2026-10-14"

@@ -1,0 +1,1114 @@
+================================================================================
+================================================================================
+
+          Third-Party Software for Retail New Item Evaluation
+
+--------------------------------------------------------------------------------
+
+The product or component covered by this notice file is subject to copyright owned by Cloudera, the Apache Software Foundation or other third parties, as applicable, and the copyright owner reserves all rights.
+
+The following notices and licenses apply to various third party software packages, including open source software packages, which are distributed with the product identified in this file or accompanying this file.  Such product (i) may not include all of the referenced third party software packages or include only a portion of a given package and (ii) may also include other components, which may contain additional third party software packages as identified in their separate respective notice files.
+
+To the extent required by the license associated with a third party software package, Cloudera, Inc. will provide a copy of the third party software package’s source code upon request and at a reasonable fee.  All requests for source code must be made in writing and mailed to "Cloudera, Inc., ATTN: Legal Dept.,5470 Great America Pkwy, Santa Clara, CA 95054" and include the following information: (i) the name and version number of the covered binary, (ii) name and the version number of the Cloudera product containing the covered binary, (iii) your name, (iv) your company or organization name (if applicable), (v) the license under which you are requesting the source code to be provided, and (vi) your return mailing and email address (if available).
+
+The following 3rd-party software packages may be used by or distributed with new-item-evaluation (RELENG-37874). Any information relevant to third-party vendors listed below are collected using common, reasonable means.
+
+Date generated: 2026-10-7
+
+Revision ID: c24dfed500a65c7a75d7fc1b1a6f54ba8d3b3ab2
+
+================================================================================
+================================================================================
+
+
+
+================================================================================
+
+                                  Dependencies
+
+================================================================================
+
+- crewai (1.15.18) [MIT]
+- duckdb (1.5.5) [MIT]
+- fastapi (0.141.1) [MIT, Apache-2.0]
+- impyla (0.22.0) [Apache-2.0]
+- numpy (1.26.4) [BSD-3-Clause]
+- open-clip-torch (3.3.0) [MIT]
+- openai (2.54.0) [Apache-2.0]
+- pillow (12.3.0) [PIL, 0BSD, CC0-1.0, Apache-2.0, OFL-1.1, BitstreamVera, HPND, MIT, mit-modern, TCL]
+- python-dotenv (1.2.3) [BSD-3-Clause]
+- react (19.2.4) [MIT]
+- react-dom (19.2.4) [MIT]
+- requests (2.34.2) [MIT]
+- scheduler (0.27.0) [MIT]
+- uvicorn (0.52.4) [BSD-3-Clause]
+- websockets (16.1.1) [BSD-3-Clause]
+
+--------------------------------------------------------------------------------
+Package Title: crewai (1.15.18)
+
+Package Locator: pip+crewai$1.15.18
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+Cutting-edge framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.
+
+* Declared Licenses *
+MIT
+--------------------------------------------------------------------------------
+File matches:
+- PKG-INFO
+- README.md
+--------------------------------------------------------------------------------
+
+* Package Info *
+
+Authors: Joao Moura <joao@crewai.com>
+Package Manager: Pip
+Project URL: https://pypi.org/project/crewai/
+Package Download URL: https://files.pythonhosted.org/packages/41/02/a27f1448ef687534a1a21c91aa6801375fd86633ae921249d47bdb6e3c58/crewai-1.15.18.tar.gz
+Dependency Path: crewai
+
+--------------------------------------------------------------------------------
+Package Title: duckdb (1.5.5)
+
+Package Locator: pip+duckdb$1.5.5
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+See here for an introduction: https://duckdb.org/docs/api/python/overview
+
+
+* Other Licenses *
+MIT
+
+* Copyrights *
+MIT
+- Copyright (c)  html
+
+* Package Info *
+
+Package Manager: Pip
+Project URL: https://www.duckdb.org
+Package Download URL: https://files.pythonhosted.org/packages/7d/19/e57151753576373c6696a12022648546cca6038e8833fda2908ee2342d9b/duckdb-1.5.5.tar.gz
+Dependency Path: duckdb
+
+--------------------------------------------------------------------------------
+Package Title: fastapi (0.141.1)
+
+Package Locator: pip+fastapi$0.141.1
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+FastAPI framework, high performance, easy to learn, fast to code, ready for production
+
+* Declared Licenses *
+MIT
+--------------------------------------------------------------------------------
+File matches:
+- LICENSE
+  - Copyright (c) 2018 Sebastián Ramírez
+--------------------------------------------------------------------------------
+
+* Other Licenses *
+Apache-2.0
+--------------------------------------------------------------------------------
+File matches:
+- fastapi/applications.py
+--------------------------------------------------------------------------------
+
+* Copyrights *
+MIT
+- Copyright (c) 2018 Sebastián Ramírez
+
+* Package Info *
+
+Authors: Sebastián Ramírez <tiangolo@gmail.com>
+Package Manager: Pip
+Project URL: https://pypi.org/project/fastapi/
+Package Download URL: https://files.pythonhosted.org/packages/8a/02/91e3416a8fdd715abb903a952a6bec7cdd8d14eed55d415fc8595524c319/fastapi-0.141.1.tar.gz
+Dependency Path: fastapi
+
+--------------------------------------------------------------------------------
+Package Title: impyla (0.22.0)
+
+Package Locator: pip+impyla$0.22.0
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+# impyla
+
+Python client for HiveServer2 implementations (e.g., Impala, Hive) for
+distributed query engines.
+
+For higher-level Impala functionality, including a Pandas-like interface over
+distributed data sets, see the [Ibis project][ibis].
+
+### Features
+
+* HiveServer2 compliant; works with Impala and Hive, including nested data
+
+* Fully [DB API 2.0 (PEP 249)][pep249]-compliant Python client (similar to
+sqlite or MySQL clients) supporting Python 2.6+ and Python 3.3+.
+
+* Works with Kerberos, LDAP, SSL
+
+* [SQLAlchemy][sqlalchemy] connector
+
+* Converter to [pandas][pandas] `DataFrame`, allowing easy integration into the
+Python data stack (including [scikit-learn][sklearn] and
+[matplotlib][matplotlib]); but see the [Ibis project][ibis] for a richer
+experience
+
+### Dependencies
+
+Required:
+
+* Python 2.7+ or 3.5+
+
+* `six`, `bitarray`
+
+* `thrift==0.16.0`
+
+* `thrift_sasl==0.4.3`
+
+Optional:
+
+* `kerberos>=1.3.0` for Kerberos over HTTP support. This also requires Kerberos libraries
+   to be installed on your system - see [System Kerberos](#system-kerberos)
+
+* `pandas` for conversion to `DataFrame` objects; but see the [Ibis project][ibis] instead
+
+* `sqlalchemy` for the SQLAlchemy engine
+
+* `pytest` for running tests; `unittest2` for testing on Python 2.6
+
+
+#### System Kerberos
+
+Different systems require different packages to be installed to enable Kerberos support in
+Impyla. Some examples of how to install the packages on different distributions follow.
+
+Ubuntu:
+```bash
+apt-get install libkrb5-dev krb5-user
+```
+
+RHEL/CentOS:
+```bash
+yum install krb5-libs krb5-devel krb5-server krb5-workstation
+```
+
+### Installation
+
+Install the latest release with `pip`:
+
+```bash
+pip install impyla
+```
+
+For the latest (dev) version, install directly from the repo:
+
+```bash
+pip install git+https://github.com/cloudera/impyla.git
+```
+
+or clone the repo:
+
+```bash
+git clone https://github.com/cloudera/impyla.git
+cd impyla
+python setup.py install
+```
+
+#### Running the tests
+
+impyla uses the [pytest][pytest] toolchain, and depends on the following
+environment variables:
+
+```bash
+export IMPYLA_TEST_HOST=your.impalad.com
+export IMPYLA_TEST_PORT=21050
+export IMPYLA_TEST_AUTH_MECH=NOSASL
+```
+
+To run the maximal set of tests, run
+
+```bash
+cd path/to/impyla
+py.test --connect impala
+```
+
+Leave out the `--connect` option to skip tests for DB API compliance.
+
+
+### Usage
+
+Impyla implements the [Python DB API v2.0 (PEP 249)][pep249] database interface
+(refer to it for API details):
+
+```python
+from impala.dbapi import connect
+conn = connect(host='my.host.com', port=21050)
+cursor = conn.cursor()
+cursor.execute('SELECT * FROM mytable LIMIT 100')
+print cursor.description  # prints the result set's schema
+results = cursor.fetchall()
+```
+
+The `Cursor` object also exposes the iterator interface, which is buffered
+(controlled by `cursor.arraysize`):
+
+```python
+cursor.execute('SELECT * FROM mytable LIMIT 100')
+for row in cursor:
+    print(row)
+```
+
+Furthermore the `Cursor` object returns you information about the columns
+returned in the query. This is useful to export your data as a csv file.
+
+```python
+import csv
+
+cursor.execute('SELECT * FROM mytable LIMIT 100')
+columns = [datum[0] for datum in cursor.description]
+targetfile = '/tmp/foo.csv'
+
+with open(targetfile, 'w', newline='') as outcsv:
+    writer = csv.writer(outcsv, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL, lineterminator='\n')
+    writer.writerow(columns)
+    for row in cursor:
+        writer.writerow(row)
+```
+
+You can also get back a pandas DataFrame object
+
+```python
+from impala.util import as_pandas
+df = as_pandas(cur)
+# carry df through scikit-learn, for example
+```
+
+
+[pep249]: http://legacy.python.org/dev/peps/pep-0249/
+[pandas]: http://pandas.pydata.org/
+[sklearn]: http://scikit-learn.org/
+[matplotlib]: http://matplotlib.org/
+[pytest]: http://pytest.org/latest/
+[sqlalchemy]: http://www.sqlalchemy.org/
+[ibis]: http://www.ibis-project.org/
+
+# How do I contribute code?
+You need to first sign and return an
+[ICLA](https://github.com/cloudera/native-toolchain/blob/icla/Cloudera%20ICLA_25APR2018.pdf)
+and
+[CCLA](https://github.com/cloudera/native-toolchain/blob/icla/Cloudera%20CCLA_25APR2018.pdf)
+before we can accept and redistribute your contribution. Once these are submitted you are
+free to start contributing to impyla. Submit these to CLA@cloudera.com.
+
+## Find
+We use Github issues to track bugs for this project. Find an issue that you would like to
+work on (or file one if you have discovered a new issue!). If no-one is working on it,
+assign it to yourself only if you intend to work on it shortly.
+
+It's a good idea to discuss your intended approach on the issue. You are much more
+likely to have your patch reviewed and committed if you've already got buy-in from the
+impyla community before you start.
+
+## Fix
+Now start coding! As you are writing your patch, please keep the following things in mind:
+
+First, please include tests with your patch. If your patch adds a feature or fixes a bug
+and does not include tests, it will generally not be accepted. If you are unsure how to
+write tests for a particular component, please ask on the issue for guidance.
+
+Second, please keep your patch narrowly targeted to the problem described by the issue.
+It's better for everyone if we maintain discipline about the scope of each patch. In
+general, if you find a bug while working on a specific feature, file a issue for the bug,
+check if you can assign it to yourself and fix it independently of the feature. This helps
+us to differentiate between bug fixes and features and allows us to build stable
+maintenance releases.
+
+Finally, please write a good, clear commit message, with a short, descriptive title and
+a message that is exactly long enough to explain what the problem was, and how it was
+fixed.
+
+Please create a pull request on github with your patch.
+
+
+* Declared Licenses *
+Apache-2.0
+
+* Copyrights *
+Apache-2.0
+- Copyright (c) 2013 Cloudera Inc.
+
+* Package Info *
+
+Authors: laserson@cloudera.com
+Package Manager: Pip
+Project URL: https://github.com/cloudera/impyla
+Package Download URL: https://files.pythonhosted.org/packages/b7/34/894799eb934954188079a82a68085ae757bbac2496e0a52eebb0e5210592/impyla-0.22.0.tar.gz
+Dependency Path: impyla
+
+--------------------------------------------------------------------------------
+Package Title: numpy (1.26.4)
+
+Package Locator: pip+numpy$1.26.4
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+<h1 align="center">
+<img src="https://raw.githubusercontent.com/numpy/numpy/main/branding/logo/primary/numpylogo.svg" width="300">
+</h1><br>
+
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](
+https://numfocus.org)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/numpy.svg?label=PyPI%20downloads)](
+https://pypi.org/project/numpy/)
+[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/numpy.svg?label=Conda%20downloads)](
+https://anaconda.org/conda-forge/numpy)
+[![Stack Overflow](https://img.shields.io/badge/stackoverflow-Ask%20questions-blue.svg)](
+https://stackoverflow.com/questions/tagged/numpy)
+[![Nature Paper](https://img.shields.io/badge/DOI-10.1038%2Fs41592--019--0686--2-blue)](
+https://doi.org/10.1038/s41586-020-2649-2)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/numpy/numpy/badge)](https://api.securityscorecards.dev/projects/github.com/numpy/numpy)
+
+
+NumPy is the fundamental package for scientific computing with Python.
+
+- **Website:** https://www.numpy.org
+- **Documentation:** https://numpy.org/doc
+- **Mailing list:** https://mail.python.org/mailman/listinfo/numpy-discussion
+- **Source code:** https://github.com/numpy/numpy
+- **Contributing:** https://www.numpy.org/devdocs/dev/index.html
+- **Bug reports:** https://github.com/numpy/numpy/issues
+- **Report a security vulnerability:** https://tidelift.com/docs/security
+
+It provides:
+
+- a powerful N-dimensional array object
+- sophisticated (broadcasting) functions
+- tools for integrating C/C++ and Fortran code
+- useful linear algebra, Fourier transform, and random number capabilities
+
+Testing:
+
+NumPy requires `pytest` and `hypothesis`.  Tests can then be run after installation with:
+
+    python -c "import numpy, sys; sys.exit(numpy.test() is False)"
+
+Code of Conduct
+----------------------
+
+NumPy is a community-driven open source project developed by a diverse group of
+[contributors](https://numpy.org/teams/). The NumPy leadership has made a strong
+commitment to creating an open, inclusive, and positive community. Please read the
+[NumPy Code of Conduct](https://numpy.org/code-of-conduct/) for guidance on how to interact
+with others in a way that makes our community thrive.
+
+Call for Contributions
+----------------------
+
+The NumPy project welcomes your expertise and enthusiasm!
+
+Small improvements or fixes are always appreciated. If you are considering larger contributions
+to the source code, please contact us through the [mailing
+list](https://mail.python.org/mailman/listinfo/numpy-discussion) first.
+
+Writing code isn’t the only way to contribute to NumPy. You can also:
+- review pull requests
+- help us stay on top of new and old issues
+- develop tutorials, presentations, and other educational materials
+- maintain and improve [our website](https://github.com/numpy/numpy.org)
+- develop graphic design for our brand assets and promotional materials
+- translate website content
+- help with outreach and onboard new contributors
+- write grant proposals and help with other fundraising efforts
+
+For more information about the ways you can contribute to NumPy, visit [our website](https://numpy.org/contribute/). 
+If you’re unsure where to start or how your skills fit in, reach out! You can
+ask on the mailing list or here, on GitHub, by opening a new issue or leaving a
+comment on a relevant issue that is already open.
+
+Our preferred channels of communication are all public, but if you’d like to
+speak to us in private first, contact our community coordinators at
+numpy-team@googlegroups.com or on Slack (write numpy-team@googlegroups.com for
+an invitation).
+
+We also have a biweekly community call, details of which are announced on the
+mailing list. You are very welcome to join.
+
+If you are new to contributing to open source, [this
+guide](https://opensource.guide/how-to-contribute/) helps explain why, what,
+and how to successfully get involved.
+
+
+
+
+* Declared Licenses *
+BSD-3-Clause
+
+* Copyrights *
+BSD-3-Clause
+- Copyright (c) 2005-2022 NumPy Developers.
+
+* Package Info *
+
+Package Manager: Pip
+Project URL: https://www.numpy.org
+Package Download URL: https://files.pythonhosted.org/packages/65/6e/09db70a523a96d25e115e71cc56a6f9031e7b8cd166c1ac8438307c14058/numpy-1.26.4.tar.gz
+Dependency Path: numpy
+
+--------------------------------------------------------------------------------
+Package Title: open-clip-torch (3.3.0)
+
+Package Locator: pip+open-clip-torch$3.3.0
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+Open reproduction of consastive language-image pretraining (CLIP) and related.
+
+* Declared Licenses *
+MIT
+--------------------------------------------------------------------------------
+File matches:
+- LICENSE
+  - Copyright (c) 2012-2021 Gabriel Ilharco, Mitchell Wortsman,
+- src/open_clip/pos_embed.py
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+--------------------------------------------------------------------------------
+
+* Copyrights *
+MIT
+- Copyright (c) 2012-2021 Gabriel Ilharco, Mitchell Wortsman,
+- Copyright (c)  Meta Platforms, Inc. and affiliates.
+
+* Package Info *
+
+Authors: Ross Wightman <ross@huggingface.co>
+Package Manager: Pip
+Project URL: https://pypi.org/project/open-clip-torch/
+Package Download URL: https://files.pythonhosted.org/packages/4a/1f/2bc9795047fa2c1ad2567ef78ce6dfc9a7b763fa534acee09a94da2a5b8f/open_clip_torch-3.3.0.tar.gz
+Dependency Path: open-clip-torch
+
+--------------------------------------------------------------------------------
+Package Title: openai (2.54.0)
+
+Package Locator: pip+openai$2.54.0
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+The official Python library for the openai API
+
+* Declared Licenses *
+Apache-2.0
+--------------------------------------------------------------------------------
+File matches:
+- LICENSE
+  - Copyright (c) 2026 OpenAI
+--------------------------------------------------------------------------------
+
+* Copyrights *
+Apache-2.0
+- Copyright (c) 2026 OpenAI
+
+* Package Info *
+
+Authors: OpenAI <support@openai.com>
+Package Manager: Pip
+Project URL: https://pypi.org/project/openai/
+Package Download URL: https://files.pythonhosted.org/packages/50/9a/8c75e8c8a5b407a0586faeb2afac91674ff955c191ecc1d6d3b6669f6788/openai-2.54.0.tar.gz
+Dependency Path: openai
+
+--------------------------------------------------------------------------------
+Package Title: pillow (12.3.0)
+
+Package Locator: pip+pillow$12.3.0
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+<p align="center">
+    <img width="248" height="250" src="https://raw.githubusercontent.com/python-pillow/pillow-logo/main/pillow-logo-248x250.png" alt="Pillow logo">
+</p>
+
+# Pillow
+
+## Python Imaging Library (Fork)
+
+Pillow is the friendly PIL fork by [Jeffrey A. Clark and
+contributors](https://github.com/python-pillow/Pillow/graphs/contributors).
+PIL is the Python Imaging Library by Fredrik Lundh and contributors.
+As of 2019, Pillow development is
+[supported by Tidelift](https://tidelift.com/subscription/pkg/pypi-pillow?utm_source=pypi-pillow&utm_medium=readme&utm_campaign=enterprise).
+
+<table>
+    <tr>
+        <th>docs</th>
+        <td>
+            <a href="https://pillow.readthedocs.io/?badge=latest"><img
+                alt="Documentation Status"
+                src="https://readthedocs.org/projects/pillow/badge/?version=latest"></a>
+        </td>
+    </tr>
+    <tr>
+        <th>tests</th>
+        <td>
+            <a href="https://github.com/python-pillow/Pillow/actions/workflows/lint.yml"><img
+                alt="GitHub Actions build status (Lint)"
+                src="https://github.com/python-pillow/Pillow/workflows/Lint/badge.svg"></a>
+            <a href="https://github.com/python-pillow/Pillow/actions/workflows/test.yml"><img
+                alt="GitHub Actions build status (Test Linux and macOS)"
+                src="https://github.com/python-pillow/Pillow/workflows/Test/badge.svg"></a>
+            <a href="https://github.com/python-pillow/Pillow/actions/workflows/test-windows.yml"><img
+                alt="GitHub Actions build status (Test Windows)"
+                src="https://github.com/python-pillow/Pillow/workflows/Test%20Windows/badge.svg"></a>
+            <a href="https://github.com/python-pillow/Pillow/actions/workflows/test-mingw.yml"><img
+                alt="GitHub Actions build status (Test MinGW)"
+                src="https://github.com/python-pillow/Pillow/workflows/Test%20MinGW/badge.svg"></a>
+            <a href="https://github.com/python-pillow/Pillow/actions/workflows/test-cygwin.yml"><img
+                alt="GitHub Actions build status (Test Cygwin)"
+                src="https://github.com/python-pillow/Pillow/workflows/Test%20Cygwin/badge.svg"></a>
+            <a href="https://github.com/python-pillow/Pillow/actions/workflows/test-docker.yml"><img
+                alt="GitHub Actions build status (Test Docker)"
+                src="https://github.com/python-pillow/Pillow/workflows/Test%20Docker/badge.svg"></a>
+            <a href="https://github.com/python-pillow/Pillow/actions/workflows/wheels.yml"><img
+                alt="GitHub Actions build status (Wheels)"
+                src="https://github.com/python-pillow/Pillow/workflows/Wheels/badge.svg"></a>
+            <a href="https://app.codecov.io/gh/python-pillow/Pillow"><img
+                alt="Code coverage"
+                src="https://codecov.io/gh/python-pillow/Pillow/branch/main/graph/badge.svg"></a>
+            <a href="https://issues.oss-fuzz.com/issues?q=title:pillow"><img
+                alt="Fuzzing Status"
+                src="https://oss-fuzz-build-logs.storage.googleapis.com/badges/pillow.svg"></a>
+        </td>
+    </tr>
+    <tr>
+        <th>package</th>
+        <td>
+            <a href="https://zenodo.org/badge/latestdoi/17549/python-pillow/Pillow"><img
+                alt="Zenodo"
+                src="https://zenodo.org/badge/17549/python-pillow/Pillow.svg"></a>
+            <a href="https://tidelift.com/subscription/pkg/pypi-pillow?utm_source=pypi-pillow&utm_medium=badge"><img
+                alt="Tidelift"
+                src="https://tidelift.com/badges/package/pypi/pillow?style=flat"></a>
+            <a href="https://pypi.org/project/pillow/"><img
+                alt="Newest PyPI version"
+                src="https://img.shields.io/pypi/v/pillow.svg"></a>
+            <a href="https://pypi.org/project/pillow/"><img
+                alt="Number of PyPI downloads"
+                src="https://img.shields.io/pypi/dm/pillow.svg"></a>
+            <a href="https://www.bestpractices.dev/projects/6331"><img
+                alt="OpenSSF Best Practices"
+                src="https://www.bestpractices.dev/projects/6331/badge"></a>
+        </td>
+    </tr>
+    <tr>
+        <th>social</th>
+        <td>
+            <a href="https://gitter.im/python-pillow/Pillow?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img
+                alt="Join the chat at https://gitter.im/python-pillow/Pillow"
+                src="https://badges.gitter.im/python-pillow/Pillow.svg"></a>
+            <a href="https://fosstodon.org/@pillow"><img
+                alt="Follow on https://fosstodon.org/@pillow"
+                src="https://img.shields.io/badge/publish-on%20Mastodon-595aff.svg"
+                rel="me"></a>
+        </td>
+    </tr>
+</table>
+
+## Overview
+
+The Python Imaging Library adds image processing capabilities to your Python interpreter.
+
+This library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.
+
+The core image library is designed for fast access to data stored in a few basic pixel formats. It should provide a solid foundation for a general image processing tool.
+
+## More Information
+
+- [Documentation](https://pillow.readthedocs.io/)
+  - [Installation](https://pillow.readthedocs.io/en/latest/installation/basic-installation.html)
+  - [Handbook](https://pillow.readthedocs.io/en/latest/handbook/index.html)
+- [Contribute](https://github.com/python-pillow/Pillow/blob/main/.github/CONTRIBUTING.md)
+  - [Issues](https://github.com/python-pillow/Pillow/issues)
+  - [Pull requests](https://github.com/python-pillow/Pillow/pulls)
+- [Release notes](https://pillow.readthedocs.io/en/stable/releasenotes/index.html)
+- [Changelog](https://github.com/python-pillow/Pillow/releases)
+  - [Pre-fork](https://github.com/python-pillow/Pillow/blob/main/CHANGES.rst#pre-fork)
+
+## Report a Vulnerability
+
+To report a security vulnerability, please follow the procedure described in the [Tidelift security policy](https://tidelift.com/docs/security).
+
+
+* Declared Licenses *
+PIL
+
+* Other Licenses *
+0BSD, CC0-1.0, Apache-2.0, OFL-1.1, BitstreamVera, HPND, MIT, mit-modern, TCL
+
+* 0BSD *
+
+* CC0-1.0 *
+
+* Apache-2.0 *
+
+* OFL-1.1 *
+
+* BitstreamVera *
+
+* HPND *
+
+* MIT *
+
+* mit-modern *
+
+* TCL *
+
+* Copyrights *
+PIL
+- Copyright (c) 1997-2011 by Secret Labs AB
+0BSD
+- Copyright (c)  Contributors to the pythoncapi_compat project.
+Apache-2.0
+- Copyright (c) 2018 Roel Nieskens, https://pixelambacht.nl Copyright (c) 2018 Google LLC
+OFL-1.1
+- Copyright (c) 2018 Roel Nieskens, https://pixelambacht.nl Copyright (c) 2018 Google LLC
+BitstreamVera
+- Copyright (c)  is on Gnome page on Bitstream Vera fonts. Glyphs imported from Arev fonts are © Tavmjung Bah (see below)
+HPND
+- Copyright (c) 1984, 1987 Adobe Systems, Inc.
+MIT
+- Copyright (c) 2010 Oliver Tonnhofer <olt@bogosoft.com>, Omniscale
+mit-modern
+- Copyright (c) 2011 Google, Inc.
+TCL
+- Copyright (c) 1987-1994 The Regents of the University of California.
+
+* Package Info *
+
+Authors: "Jeffrey A. Clark" <aclark@aclark.net>
+Package Manager: Pip
+Project URL: https://pypi.org/project/pillow/
+Package Download URL: https://files.pythonhosted.org/packages/25/c2/669d88644cddb1485bd9534e63e8cf476c8e51cb3c3a1297677023505c0e/pillow-12.3.0-cp310-cp310-macosx_10_10_x86_64.whl
+Dependency Path: pillow
+
+--------------------------------------------------------------------------------
+Package Title: python-dotenv (1.2.3)
+
+Package Locator: pip+python-dotenv$1.2.3
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+Read key-value pairs from a .env file and set them as environment variables
+
+* Declared Licenses *
+BSD-3-Clause
+--------------------------------------------------------------------------------
+File matches:
+- docs/license.md
+  - Copyright (c) 2014 Saurabh Kumar (python-dotenv), 2013, Ted Tieken (django-dotenv-rw), 2013, Jacob Kaplan-Moss (django-dotenv)
+- LICENSE
+  - Copyright (c) 2014 Saurabh Kumar (python-dotenv), 2013, Ted Tieken (django-dotenv-rw), 2013, Jacob Kaplan-Moss (django-dotenv)
+--------------------------------------------------------------------------------
+
+* Copyrights *
+BSD-3-Clause
+- Copyright (c) 2014 Saurabh Kumar (python-dotenv), 2013, Ted Tieken (django-dotenv-rw), 2013, Jacob Kaplan-Moss (django-dotenv)
+
+* Package Info *
+
+Authors: Saurabh Kumar <me+github@saurabh-kumar.com>
+Package Manager: Pip
+Project URL: https://pypi.org/project/python-dotenv/
+Package Download URL: https://files.pythonhosted.org/packages/6a/53/ed9d74092561d4b01a2ef1349d52cdbc135e526c245f366b089cfca6de49/python_dotenv-1.2.3.tar.gz
+Dependency Path: python-dotenv
+
+--------------------------------------------------------------------------------
+Package Title: react (19.2.4)
+
+Package Locator: npm+react$19.2.4
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+React is a JavaScript library for building user interfaces.
+
+* Declared Licenses *
+MIT
+--------------------------------------------------------------------------------
+File matches:
+- cjs/react-compiler-runtime.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-compiler-runtime.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-compiler-runtime.profiling.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-jsx-dev-runtime.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-jsx-dev-runtime.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-jsx-dev-runtime.profiling.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-jsx-dev-runtime.react-server.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-jsx-dev-runtime.react-server.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-jsx-runtime.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-jsx-runtime.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-jsx-runtime.profiling.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-jsx-runtime.react-server.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-jsx-runtime.react-server.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react.react-server.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react.react-server.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- compiler-runtime.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- LICENSE
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- package.json
+--------------------------------------------------------------------------------
+
+* Copyrights *
+MIT
+- Copyright (c)  Meta Platforms, Inc. and affiliates.
+
+* Package Info *
+
+Authors: opensource+npm@fb.com, react-core@meta.com
+Package Manager: NPM
+Project URL: https://react.dev/
+Package Download URL: https://registry.npmjs.org/react/-/react-19.2.4.tgz
+Dependency Path: react > react-dom > react
+
+--------------------------------------------------------------------------------
+Package Title: react-dom (19.2.4)
+
+Package Locator: npm+react-dom$19.2.4
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+React package for working with the DOM.
+
+* Declared Licenses *
+MIT
+--------------------------------------------------------------------------------
+File matches:
+- cjs/react-dom-client.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-dom-client.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-dom-profiling.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-dom-profiling.profiling.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-dom-server-legacy.browser.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+  - Copyright (c) 2011 Gary Court
+- cjs/react-dom-server-legacy.browser.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+  - Copyright (c) 2011 Gary Court
+- cjs/react-dom-server-legacy.node.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+  - Copyright (c) 2011 Gary Court
+- cjs/react-dom-server-legacy.node.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+  - Copyright (c) 2011 Gary Court
+- cjs/react-dom-server.browser.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+  - Copyright (c) 2011 Gary Court
+- cjs/react-dom-server.browser.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+  - Copyright (c) 2011 Gary Court
+- cjs/react-dom-server.bun.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-dom-server.bun.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-dom-server.edge.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+  - Copyright (c) 2011 Gary Court
+- cjs/react-dom-server.edge.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+  - Copyright (c) 2011 Gary Court
+- cjs/react-dom-server.node.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-dom-server.node.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-dom-test-utils.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-dom-test-utils.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-dom.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-dom.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-dom.react-server.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/react-dom.react-server.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- LICENSE
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- package.json
+--------------------------------------------------------------------------------
+
+* Copyrights *
+MIT
+- Copyright (c)  Meta Platforms, Inc. and affiliates.
+- Copyright (c) 2011 Gary Court
+
+* Package Info *
+
+Authors: opensource+npm@fb.com, react-core@meta.com
+Package Manager: NPM
+Project URL: https://react.dev/
+Package Download URL: https://registry.npmjs.org/react-dom/-/react-dom-19.2.4.tgz
+Dependency Path: react-dom
+
+--------------------------------------------------------------------------------
+Package Title: requests (2.34.2)
+
+Package Locator: pip+requests$2.34.2
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+# Requests
+
+**Requests** is a simple, yet elegant, HTTP library.
+
+```python
+>>> import requests
+>>> r = requests.get('https://httpbin.org/basic-auth/user/pass', auth=('user', 'pass'))
+>>> r.status_code
+200
+>>> r.headers['content-type']
+'application/json; charset=utf8'
+>>> r.encoding
+'utf-8'
+>>> r.text
+'{"authenticated": true, ...'
+>>> r.json()
+{'authenticated': True, ...}
+```
+
+Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your `PUT` & `POST` data — but nowadays, just use the `json` method!
+
+Requests is one of the most downloaded Python packages today, pulling in around `30M downloads / week`— according to GitHub, Requests is currently [depended upon](https://github.com/psf/requests/network/dependents?package_id=UGFja2FnZS01NzA4OTExNg%3D%3D) by `1,000,000+` repositories. You may certainly put your trust in this code.
+
+[![Downloads](https://pepy.tech/badge/requests/month)](https://pepy.tech/project/requests)
+[![Supported Versions](https://img.shields.io/pypi/pyversions/requests.svg)](https://pypi.org/project/requests)
+[![Contributors](https://img.shields.io/github/contributors/psf/requests.svg)](https://github.com/psf/requests/graphs/contributors)
+
+## Installing Requests and Supported Versions
+
+Requests is available on PyPI:
+
+```console
+$ python -m pip install requests
+```
+
+Requests officially supports Python 3.7+.
+
+## Supported Features & Best–Practices
+
+Requests is ready for the demands of building robust and reliable HTTP–speaking applications, for the needs of today.
+
+- Keep-Alive & Connection Pooling
+- International Domains and URLs
+- Sessions with Cookie Persistence
+- Browser-style TLS/SSL Verification
+- Basic & Digest Authentication
+- Familiar `dict`–like Cookies
+- Automatic Content Decompression and Decoding
+- Multi-part File Uploads
+- SOCKS Proxy Support
+- Connection Timeouts
+- Streaming Downloads
+- Automatic honoring of `.netrc`
+- Chunked HTTP Requests
+
+## API Reference and User Guide available on [Read the Docs](https://requests.readthedocs.io)
+
+[![Read the Docs](https://raw.githubusercontent.com/psf/requests/main/ext/ss.png)](https://requests.readthedocs.io)
+
+## Cloning the repository
+
+When cloning the Requests repository, you may need to add the `-c
+fetch.fsck.badTimezone=ignore` flag to avoid an error about a bad commit (see
+[this issue](https://github.com/psf/requests/issues/2690) for more background):
+
+```shell
+git clone -c fetch.fsck.badTimezone=ignore https://github.com/psf/requests.git
+```
+
+You can also apply this setting to your global Git config:
+
+```shell
+git config --global fetch.fsck.badTimezone ignore
+```
+
+---
+
+[![Kenneth Reitz](https://raw.githubusercontent.com/psf/requests/main/ext/kr.png)](https://kennethreitz.org) [![Python Software Foundation](https://raw.githubusercontent.com/psf/requests/main/ext/psf.png)](https://www.python.org/psf)
+
+
+
+
+* Other Licenses *
+MIT
+
+* Copyrights *
+MIT
+- Copyright (c) 2008-2011 Andrey Petrov and contributors (see CONTRIBUTORS.txt),
+
+* Package Info *
+
+Authors: me@kennethreitz.org
+Package Manager: Pip
+Project URL: https://requests.readthedocs.io
+Package Download URL: https://files.pythonhosted.org/packages/ac/c3/e2a2b89f2d3e2179abd6d00ebd70bff6273f37fb3e0cc209f48b39d00cbf/requests-2.34.2.tar.gz
+Dependency Path: requests
+* Notice File(s) *
+NOTICE
+Requests
+Copyright 2019 Kenneth Reitz
+
+
+--------------------------------------------------------------------------------
+Package Title: scheduler (0.27.0)
+
+Package Locator: npm+scheduler$0.27.0
+
+Package Depth: Transitive
+--------------------------------------------------------------------------------
+
+Cooperative scheduler for the browser environment.
+
+* Declared Licenses *
+MIT
+--------------------------------------------------------------------------------
+File matches:
+- cjs/scheduler-unstable_mock.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/scheduler-unstable_mock.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/scheduler-unstable_post_task.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/scheduler-unstable_post_task.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/scheduler.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/scheduler.native.development.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/scheduler.native.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- cjs/scheduler.production.js
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- LICENSE
+  - Copyright (c)  Meta Platforms, Inc. and affiliates.
+- package.json
+--------------------------------------------------------------------------------
+
+* Copyrights *
+MIT
+- Copyright (c)  Meta Platforms, Inc. and affiliates.
+
+* Package Info *
+
+Authors: opensource+npm@fb.com, react-core@meta.com
+Package Manager: NPM
+Project URL: https://react.dev/
+Package Download URL: https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz
+Dependency Path: react-dom > scheduler
+
+--------------------------------------------------------------------------------
+Package Title: uvicorn (0.52.4)
+
+Package Locator: pip+uvicorn$0.52.4
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+The lightning-fast ASGI server.
+
+* Declared Licenses *
+BSD-3-Clause
+--------------------------------------------------------------------------------
+File matches:
+- LICENSE.md
+  - Copyright (c) 2017 present, [Encode OSS Ltd](https://www.encode.io/).
+- uvicorn/_types.py
+  - Copyright (c)  Django Software Foundation and individual contributors.
+--------------------------------------------------------------------------------
+
+* Copyrights *
+BSD-3-Clause
+- Copyright (c) 2017 present, [Encode OSS Ltd](https://www.encode.io/).
+- Copyright (c)  Django Software Foundation and individual contributors.
+
+* Package Info *
+
+Authors: Tom Christie <tom@tomchristie.com>
+Package Manager: Pip
+Project URL: https://pypi.org/project/uvicorn/
+Package Download URL: https://files.pythonhosted.org/packages/f2/0f/3f86e61397dd33bf2ccf28188c40db6a740658aeebbbf6e7dbc101a1f487/uvicorn-0.52.4.tar.gz
+Dependency Path: uvicorn
+
+--------------------------------------------------------------------------------
+Package Title: websockets (16.1.1)
+
+Package Locator: pip+websockets$16.1.1
+
+Package Depth: Direct
+--------------------------------------------------------------------------------
+
+An implementation of the WebSocket Protocol (RFC 6455 & 7692)
+
+* Declared Licenses *
+BSD-3-Clause
+--------------------------------------------------------------------------------
+File matches:
+- LICENSE
+  - Copyright (c)  Aymeric Augustin and contributors
+--------------------------------------------------------------------------------
+
+* Copyrights *
+BSD-3-Clause
+- Copyright (c)  Aymeric Augustin and contributors
+
+* Package Info *
+
+Authors: Aymeric Augustin <aymeric.augustin@m4x.org>
+Package Manager: Pip
+Project URL: https://pypi.org/project/websockets/
+Package Download URL: https://files.pythonhosted.org/packages/21/f7/bc3a25c5ec26ce62ce487690becc2f3710bbc7b33338f005ad390db0b986/websockets-16.1.1.tar.gz
+Dependency Path: websockets
+
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Report Generated by FOSSA on 2026-10-7
